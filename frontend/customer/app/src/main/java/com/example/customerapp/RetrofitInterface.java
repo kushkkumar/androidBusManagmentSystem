@@ -1,6 +1,7 @@
 package com.example.customerapp;
 
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -17,6 +18,12 @@ public interface RetrofitInterface {
 
     @POST("'addMoney")
     Call<Void> executeMoneyUpdate(@Body HashMap<String,String> map);
+
+    @POST("paymentDetails")
+    Call<List<TransactionDetails>> getPaymentDetails();
+
+
+
 
 
 

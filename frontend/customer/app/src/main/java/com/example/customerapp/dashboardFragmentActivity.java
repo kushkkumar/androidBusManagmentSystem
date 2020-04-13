@@ -34,7 +34,7 @@ public class dashboardFragmentActivity extends Fragment {
         view.findViewById(R.id.payments_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fram1,new recyclerViewFragmentActivity()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fram1,new paymentDetailFragmentActivity()).addToBackStack(null).commit();
 
 
             }

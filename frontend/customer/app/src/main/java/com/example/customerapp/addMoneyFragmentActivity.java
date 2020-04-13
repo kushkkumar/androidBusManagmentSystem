@@ -54,11 +54,14 @@ public class addMoneyFragmentActivity extends Fragment {
         addMoney=view.findViewById(R.id.enterMoneyId);
 
 
-        Toast.makeText(getContext(),""+curbal+Integer.parseInt(addMoney.getText().toString()),Toast.LENGTH_SHORT).show();
-
         view.findViewById(R.id.submit_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                float temp=Float.parseFloat(addMoney.getText().toString());
+                final int res= (int) (curbal+temp);
+
+
+               // Toast.makeText(getContext(),""+res,Toast.LENGTH_SHORT).show();
                 HashMap<String,String> map3=new HashMap<>();
                 map3.put("username",setterRegisterPreview.getCust_user_name());
                 map3.put("balupdate",addMoney.getText().toString());
@@ -70,7 +73,7 @@ public class addMoneyFragmentActivity extends Fragment {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code()==502){
                             setterRegisterPreview s2=new setterRegisterPreview();
-                            s2.setBalance(String.valueOf(curbal+Integer.parseInt(addMoney.getText().toString())));
+                            s2.setBalance(String.valueOf(res));
 
                         }
                         else{
