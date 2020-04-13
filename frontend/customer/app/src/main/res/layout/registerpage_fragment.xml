@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/regName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/regName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/regPass"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/regPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your 6 digit password"
+        android:inputType="numberPassword"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/regdob"
+        app:layout_constraintTop_toBottomOf="@+id/regName"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/regdob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your DOB (dd-mm-yyyy)"
+        android:inputType="date"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/regPhone"
+        app:layout_constraintTop_toBottomOf="@+id/regPass"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <EditText
+        android:id="@+id/regPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/regEmail"
+        app:layout_constraintTop_toBottomOf="@+id/regdob"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/regEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter your Emaiil ID"
+        android:inputType="textEmailAddress"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/register_submit_button"
+        app:layout_constraintTop_toBottomOf="@+id/regPhone"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/register_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_to_login_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
+
+    <TextView
+        android:id="@+id/nav_to_login_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have Account? Login"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_submit_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name='conductorApp'
+include ':app'
