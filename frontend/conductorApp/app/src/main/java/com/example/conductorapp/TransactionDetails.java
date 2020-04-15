@@ -1,13 +1,14 @@
-package com.example.customerapp;
+package com.example.conductorapp;
 
 import com.google.gson.annotations.SerializedName;
 
 public class TransactionDetails {
-
     @SerializedName("transaction_id")
     private String transaction_id;
     @SerializedName("bus_id")
     private String bus_id;
+    @SerializedName("cust_id")
+    private String cust_id;
     @SerializedName("route_id")
     private String route_id;
     @SerializedName("count_of_head")
@@ -19,15 +20,6 @@ public class TransactionDetails {
     @SerializedName("transaction_date")
     private String transaction_date;
 
-    public TransactionDetails(String transaction_id, String bus_id, String route_id, String count_of_head, String cost_per_head, String total_cost, String transaction_date) {
-        this.transaction_id = transaction_id;
-        this.bus_id = bus_id;
-        this.route_id = route_id;
-        this.count_of_head = count_of_head;
-        this.cost_per_head = cost_per_head;
-        this.total_cost = total_cost;
-        this.transaction_date = transaction_date;
-    }
 
     public String getTransaction_id() {
         return transaction_id;
@@ -43,6 +35,14 @@ public class TransactionDetails {
 
     public void setBus_id(String bus_id) {
         this.bus_id = bus_id;
+    }
+
+    public String getCust_id() {
+        return cust_id;
+    }
+
+    public void setCust_id(String cust_id) {
+        this.cust_id = cust_id;
     }
 
     public String getRoute_id() {

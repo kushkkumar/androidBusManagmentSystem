@@ -74,6 +74,9 @@ public class addMoneyFragmentActivity extends Fragment {
                         if(response.code()==502){
                             setterRegisterPreview s2=new setterRegisterPreview();
                             s2.setBalance(String.valueOf(res));
+                            clearBackStack();
+                            Toast.makeText(getContext(),"Amount has been added \nYour updated balance is "+res+" Plesase check your account !!",Toast.LENGTH_LONG).show();
+                            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fram1,new dashboardFragmentActivity()).commit();
 
                         }
                         else{
@@ -84,43 +87,11 @@ public class addMoneyFragmentActivity extends Fragment {
 
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
-                        Toast.makeText(getContext(),"error"+t,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(),"error main"+t,Toast.LENGTH_SHORT).show();
 
                     }
                 });
 
-
-
-
-
-
-
-//                AlertDialog.Builder builder;
-//                builder =new AlertDialog.Builder(getActivity());
-//                builder.setTitle("Your Password")
-//                        .setMessage("Enter your app password");
-//                final EditText input=new EditText(getActivity());
-//                input.setInputType(InputType.TYPE_NUMBER_VARIATION_PASSWORD);
-//                builder.setView(input)
-//                        .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                String pas="123456";
-//                                if(input.getText().toString().equals(pas)){
-//                                    Toast.makeText(getContext(),"Money Added to your account !!!",Toast.LENGTH_LONG).show();
-//                                    clearBackStack();
-//                                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fram1,new dashboardFragmentActivity()).commit();
-//                                }
-//
-//                            }
-//                        })
-//                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                            }
-//                        })
-//                        .show();
 
             }
         });

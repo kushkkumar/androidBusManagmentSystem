@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_marginTop=".5dp"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="transaction id:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/tid"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="bus id:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/bid"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="cust id:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/cutid"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="route id:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/rid"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Counts of head :"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/coh"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="count per head :"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/cph"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Total cost : "
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/tot"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="1dp"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="hello "
+                android:textSize="20dp"
+                android:id="@+id/date"
+                >
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

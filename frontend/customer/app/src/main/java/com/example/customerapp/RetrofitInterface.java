@@ -16,7 +16,7 @@ public interface RetrofitInterface {
     @POST("/customerRegistration")
     Call<previewRegistrationResul> executeCustomerRegistration(@Body HashMap<String,String> map);
 
-    @POST("'addMoney")
+    @POST("addMoney")
     Call<Void> executeMoneyUpdate(@Body HashMap<String,String> map);
 
     @POST("paymentDetails")
