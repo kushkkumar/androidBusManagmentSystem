@@ -19,6 +19,41 @@ public class setter {
     @SerializedName(("bus_password"))
     private String bus_password;
 
+
+    //this has to be altered
+    @SerializedName("cust_id")
+    private static String cust_id;
+
+    @SerializedName("route_id")
+    private static String route_id;
+
+    @SerializedName("route_cost")
+    private static String route_cost;
+
+    public static String getRoute_cost() {
+        return route_cost;
+    }
+
+    public void setRoute_cost(String route_cost) {
+        this.route_cost = route_cost;
+    }
+
+    public static String getRoute_id() {
+        return route_id;
+    }
+
+    public void setRoute_id(String route_id) {
+        this.route_id = route_id;
+    }
+
+    public static String getCust_id() {
+        return cust_id;
+    }
+
+    public void setCust_id(String cust_id) {
+        this.cust_id = cust_id;
+    }
+
     public String getBus_name() {
         return bus_name;
     }

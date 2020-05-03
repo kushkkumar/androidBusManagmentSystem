@@ -58,6 +58,7 @@
             android:layout_height="60dp"
             android:text="check"
             android:textSize="20dp"
+            android:layout_margin="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,25 +75,25 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="275dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/spinner2"
+            android:id="@+id/routeFrom"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/routeDetailsTo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="275dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/editText3"
+            android:id="@+id/routeDetailsTo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/cohEntry"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/routeFrom" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/cohEntry"
             android:layout_width="82dp"
             android:layout_height="37dp"
             android:ems="10"
@@ -100,17 +101,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+            app:layout_constraintTop_toBottomOf="@+id/routeDetailsTo" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="Enter the count of head"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/editText3"
+            app:layout_constraintEnd_toStartOf="@+id/cohEntry"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+            app:layout_constraintTop_toBottomOf="@+id/routeDetailsTo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -124,14 +128,17 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
+            android:id="@+id/billingDetaild"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:text="Enter"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

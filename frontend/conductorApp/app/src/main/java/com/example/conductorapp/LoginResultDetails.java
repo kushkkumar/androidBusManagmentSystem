@@ -18,6 +18,18 @@ public class LoginResultDetails {
     @SerializedName(("bus_password"))
     private String bus_password;
 
+
+    @SerializedName(("cust_user_name"))
+    private String cust_user_name;
+
+    public String getCust_user_name() {
+        return cust_user_name;
+    }
+
+    public void setCust_user_name(String cust_user_name) {
+        this.cust_user_name = cust_user_name;
+    }
+
     public String getBus_name() {
         return bus_name;
     }
