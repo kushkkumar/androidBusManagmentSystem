@@ -32,12 +32,7 @@ public class dashboardFragmentActivity extends Fragment {
             }
         });
 
-        view.findViewById(R.id.routeDetailbtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        
         return view;
     }
 }

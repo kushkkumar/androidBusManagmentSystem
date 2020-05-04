@@ -151,7 +151,8 @@ public class Main2Activity extends AppCompatActivity {
                      arr[i++]=s;
                  }
 
-                 ArrayAdapter ap=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,arr);
+                 ArrayAdapter ap=new ArrayAdapter<String>(getApplicationContext(),R.layout.color_spinner,arr);
+                 ap.setDropDownViewResource(R.layout.spinner_dropdown);
                  routeFrom.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                      @Override
                      public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -168,7 +169,8 @@ public class Main2Activity extends AppCompatActivity {
                  routeFrom.setAdapter(ap);
 
 
-                 ArrayAdapter ap1=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,arr);
+                 ArrayAdapter ap1=new ArrayAdapter<String>(getApplicationContext(),R.layout.color_spinner,arr);
+                 ap1.setDropDownViewResource(R.layout.spinner_dropdown);
 
                  routeTo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                      @Override
@@ -283,7 +285,7 @@ public class Main2Activity extends AppCompatActivity {
                         map7.put("routeid",setter.getRoute_id());
                         map7.put("coh",coh);
                         map7.put("cph",setter.getRoute_cost());
-                        map7.put("total",(Integer.parseInt(setter.getRoute_cost())*Integer.parseInt(coh));
+                        //map7.put("total",(Integer.parseInt(setter.getRoute_cost())*Integer.parseInt(coh)));
                         map7.put("transDate",formattedDate);
 
                         Call<Void> call=retrofitInterface.insertToTransaction(map7);
