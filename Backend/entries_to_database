@@ -1,0 +1,185 @@
+/*heroku cli command*/
+
+heroku pg:psql postgresql-tapered-04375 --app pure-sea-79661
+
+
+create table customer(
+    cust_id serial primary key not null,
+    cust_name varchar(20) not null,
+    cust_dob date not null,
+    cust_phone_no varchar(20) not null,
+    cust_email_id varchar(20) not null,
+    cust_user_name varchar(20) not null,
+    cust_password varchar(20) not null,
+    balance integer not null,
+    unique(cust_user_name)
+);
+
+create table bus(
+    bus_id serial primary key not null,
+    bus_name varchar(20) not null,
+    bus_number integer not null,
+    route_end_point_1 varchar(20) not null,
+    route_end_point_2 varchar(20) not null,
+    route_via varchar(20) not null,
+    bus_user_name varchar(20) not null,
+    bus_password varchar(20) not null
+);
+
+create table admin(
+    admin_id serial primary key not null,
+    admin_name varchar(20) not null,
+    admin_user_name varchar(20) not null,
+    admin_password varchar(20) not null
+);
+
+create table route_table(
+    route_id serial primary key not null,
+    route_start varchar(20) not null,
+    route_end varchar(20) not null,
+    route_cost integer not null
+);
+
+create table transaction(
+    transaction_id serial primary key not null, 
+    bus_id serial references bus(bus_id) on delete cascade on update cascade,  
+    cust_id serial references customer(cust_id) on delete cascade on update cascade, 
+    route_id serial references route_table(route_id) on delete cascade on update cascade, 
+    count_of_head integer,
+    cost_per_head integer,
+    total_cost integer,
+    transaction_date date not null
+);
+
+
+drop table tablename
+
+delete from tablename where custid=1
+
+
+
+
+insert into customer(cust_name,cust_dob,cust_phone_no,cust_email_id,cust_user_name,cust_password,balance) values ('"+name+"','"+dob+"',"+phone+",'"+email+"','"+username+"','"+password+"',100);
+
+insert into bus(bus_name,bus_number,route_end_point_1,route_end_point_2,route_via,bus_user_name,bus_password) values ('vishal','vishal1','mangalore','udupi','surathkal','kush1','123456');
+
+insert into route_table (route_start,route_end,route_cost) values ('mangalore','moodbidri',40);
+
+insert into transaction(transaction_id,bus_id,cust_id,route_id,count_of_head,count_per_head,total_cost,transaction_date) values (1,
+
+pure-sea-79661::DATABASE=> select * from customer;
+ cust_id | cust_name | cust_dob | cust_phone_no | cust_email_id | cust_user_name | cust_password | balance 
+---------+-----------+----------+---------------+---------------+----------------+---------------+---------
+(0 rows)
+
+pure-sea-79661::DATABASE=> select * from bus;
+ bus_id | bus_name | bus_number | route_end_point_1 | route_end_point_2 | route_via | bus_user_name | bus_password 
+--------+----------+------------+-------------------+-------------------+-----------+---------------+--------------
+(0 rows)
+
+pure-sea-79661::DATABASE=> select * from admin;
+ admin_id | admin_name | admin_user_name | admin_password 
+----------+------------+-----------------+----------------
+(0 rows)
+
+pure-sea-79661::DATABASE=> select * from route_table;
+ route_id | route_start | route_end | route_cost 
+----------+-------------+-----------+------------
+(0 rows)
+
+pure-sea-79661::DATABASE=> select * from transaction;
+ transaction_id | bus_id | cust_id | route_id | count_of_head | cost_per_head | total_cost | transaction_date 
+----------------+--------+---------+----------+---------------+---------------+------------+------------------
+(0 rows)
+
+
+
+
+tabel bus_routes
+    brid autoincrement,
+    bus_id foreign key,
+    route_name                     (drop down )
+
+
+    create table bus_routes(
+        brid serial primary key not null,
+        bus_id serial references bus(bus_id) on delete cascade on update cascade, 
+        route_name varchar(20) not null  
+    };
+
+
+    insert into bus_routes(bus_id,route_name) values (1,'Mangalore'),(1,'Nanthoor'),(1,'surathkal');
+
+    insert into route_table(route_start,route_end,route_cost) values ('Mangalore','surathkal',50);
+
+
+
+    1,mangalore
+    1,surathkal
+    1,nanthoor
+    1,jyothi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+heroku pg:psql postgresql-tapered-04375 --app pure-sea-79661
+alter table customer alter column cust_user_name set unique
+
+
+
+ALTER TABLE the_table ADD CONSTRAINT constraint_name UNIQUE (thecolumn)
+
+ALTER TABLE customer ADD UNIQUE (cust_user_name);
+
+
+
+pure-sea-79661::DATABASE=> select * from customer;
+ cust_id | cust_name | cust_dob | cust_phone_no | cust_email_id | cust_user_name | cust_password | balance 
+---------+-----------+----------+---------------+---------------+----------------+---------------+---------
+(0 rows)
+
+
+pure-sea-79661::DATABASE=> select * from bus;
+ bus_id | bus_name | bus_number | route_end_point_1 | route_end_point_2 | route_via | bus_user_name | bus_password 
+--------+----------+------------+-------------------+-------------------+-----------+---------------+--------------
+(0 rows)
+
+
+pure-sea-79661::DATABASE=> select * from admin;
+ admin_id | admin_name | admin_user_name | admin_password 
+----------+------------+-----------------+----------------
+(0 rows)
+
+
+pure-sea-79661::DATABASE=> select * from route_table;
+ route_id | route_start | route_end | route_cost 
+----------+-------------+-----------+------------
+(0 rows)
+
+
+pure-sea-79661::DATABASE=> select * from transaction;
+ transaction_id | bus_id | cust_id | route_id | count_of_head | cost_per_head | total_cost | transaction_date 
+----------------+--------+---------+----------+---------------+---------------+------------+------------------
+(0 rows)
+
+
+
+
+
+
+
+
+
+
+
+

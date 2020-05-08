@@ -1,0 +1,26 @@
+{
+  "name": "androidBusManagmentSystem",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushkkumar/androidBusManagmentSystem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kushkkumar/androidBusManagmentSystem/issues"
+  },
+  "homepage": "https://github.com/kushkkumar/androidBusManagmentSystem#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
