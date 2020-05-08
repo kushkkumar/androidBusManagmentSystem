@@ -4,14 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/customer_entry"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/dashboard"
         android:text="Register"
         android:textSize="50dp"
+        android:gravity="center"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toTopOf="@+id/regName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,69 +23,89 @@
 
     <EditText
         android:id="@+id/regName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input_register"
         android:ems="10"
         android:gravity="center"
         android:hint="Enter your name"
         android:inputType="textPersonName"
         android:text=""
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/regPass"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/regPass"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input_register"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter your 6 digit password"
+        android:hint="Enter your 6 PIN"
         android:inputType="numberPassword"
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/regdob"
-        app:layout_constraintTop_toBottomOf="@+id/regName"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regName" />
 
     <EditText
         android:id="@+id/regdob"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input_register"
         android:ems="10"
         android:gravity="center"
-        android:hint="Enter your DOB (dd-mm-yyyy)"
+        android:hint="Enter your DOB (m-d-y)"
         android:inputType="date"
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/regPhone"
-        app:layout_constraintTop_toBottomOf="@+id/regPass"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPass" />
 
     <EditText
         android:id="@+id/regPhone"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input_register"
         android:ems="10"
         android:gravity="center"
         android:hint="Enter your phone number"
         android:inputType="phone"
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/regEmail"
-        app:layout_constraintTop_toBottomOf="@+id/regdob"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regdob" />
 
     <EditText
         android:id="@+id/regEmail"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/input_register"
         android:ems="10"
         android:gravity="center"
         android:hint="Enter your Emaiil ID"
         android:inputType="textEmailAddress"
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/register_submit_button"
-        app:layout_constraintTop_toBottomOf="@+id/regPhone"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPhone" />
 
     <Button
         android:id="@+id/register_submit_button"
@@ -89,6 +113,8 @@
         android:layout_height="wrap_content"
         android:text="SUBMIT"
         android:textSize="30dp"
+        android:background="@drawable/button"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toTopOf="@+id/nav_to_login_page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,6 +126,7 @@
         android:layout_height="wrap_content"
         android:text="Have Account? Login"
         android:textSize="20dp"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

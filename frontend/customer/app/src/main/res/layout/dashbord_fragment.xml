@@ -4,10 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/clayout"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView2"
+        android:background="@drawable/dlayout"
+        android:textColor="@color/font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -21,6 +24,8 @@
 
     <Button
         android:id="@+id/add_money_btn"
+        android:background="@drawable/blayout"
+        android:textColor="@color/font"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:text="Add money"
@@ -34,6 +39,8 @@
         android:id="@+id/show_qr_btn"
         android:layout_width="300dp"
         android:layout_height="100dp"
+        android:background="@drawable/blayout"
+        android:textColor="@color/font"
         android:text="Show QR"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/payments_btn"
@@ -45,6 +52,8 @@
         android:id="@+id/payments_btn"
         android:layout_width="300dp"
         android:layout_height="100dp"
+        android:background="@drawable/blayout"
+        android:textColor="@color/font"
         android:text="PAYMENTS"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

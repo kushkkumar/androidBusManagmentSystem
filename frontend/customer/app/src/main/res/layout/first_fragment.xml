@@ -4,16 +4,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/clayout"
     android:layout_height="match_parent">
 
     <TextView
+        android:background="@drawable/dlayout"
         android:id="@+id/textView"
-        android:layout_width="289dp"
-        android:layout_height="117dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Hello There!!!!"
-        android:textSize="40dp"
+        android:textSize="45dp"
         android:textStyle="bold"
+        android:textColor="#eaecff"
         app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +24,12 @@
 
     <Button
         android:id="@+id/loginBtn"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
+        android:layout_width="320dp"
+        android:layout_height="88dp"
+        android:background="@drawable/blayout"
         android:text="Login"
+        android:textColor="#eaecff"
         android:textSize="30dp"
-
         app:layout_constraintBottom_toTopOf="@+id/registerBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +37,12 @@
 
     <Button
         android:id="@+id/registerBtn"
-        android:layout_width="200dp"
+        android:layout_width="320dp"
         android:layout_height="80dp"
         android:text="Register"
         android:textSize="30dp"
+        android:background="@drawable/blayout"
+        android:textColor="#eaecff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

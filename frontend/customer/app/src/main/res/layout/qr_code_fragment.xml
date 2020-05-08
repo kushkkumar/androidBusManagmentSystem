@@ -4,9 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/customer_entry"
     android:layout_height="match_parent">
 
     <TextView
+        android:background="@drawable/dashboard"
+        android:textColor="@color/font"
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,6 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12"></ImageView>
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,6 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/qrcode_image" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/custUerid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,6 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/qrcode_image" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,6 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/custBalaId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,6 +82,8 @@
         app:layout_constraintTop_toBottomOf="@+id/custUerid" />
 
     <Button
+        android:background="@drawable/button"
+        android:textColor="@color/font"
         android:id="@+id/go_home_from_qrpage"
         android:layout_width="match_parent"
         android:layout_height="90dp"

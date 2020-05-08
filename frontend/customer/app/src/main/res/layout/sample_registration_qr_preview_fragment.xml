@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/customer_entry"
     android:layout_height="match_parent">
 
     <TextView
@@ -11,8 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:background="@drawable/dashboard"
         android:text="QR Code"
         android:textSize="50dp"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toTopOf="@+id/registerPreview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,13 +25,13 @@
         android:id="@+id/registerPreview"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-
         app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/registerPreview" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/qrCustUserId"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -51,6 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/registerPreview" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,6 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
+        android:textColor="@color/font"
         android:id="@+id/qrBalId"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -76,9 +82,10 @@
         android:id="@+id/homeBtnToDashBord"
         android:layout_width="408dp"
         android:layout_height="89dp"
-
+        android:background="@drawable/button"
         android:text="HOME"
         android:textSize="30dp"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

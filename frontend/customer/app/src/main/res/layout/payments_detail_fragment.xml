@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/customer_entry">
+
+    <TextView
+        android:background="@drawable/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="TRANSACTION"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/font"
+        android:layout_margin="20dp"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:id="@+id/recylerPaymentInfo"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

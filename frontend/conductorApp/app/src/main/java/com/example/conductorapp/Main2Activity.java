@@ -85,19 +85,48 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
+//        findViewById(R.id.checkForTheCustomer).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                HashMap<String,String> map =new HashMap<>();
+//                map.put("username", ((EditText)findViewById(R.id.custUserNameIssuid)).getText().toString());
+//                Call<CustomerDetails> call=retrofitInterface.customerConfirmationResult(map);
+//                call.enqueue(new Callback<CustomerDetails>() {
+//                    @Override
+//                    public void onResponse(Call<CustomerDetails> call, Response<CustomerDetails> response) {
+//                        if (response.code()==200){
+//                            CustomerDetails customerDetails=response.body();
+//                            Toast.makeText(getApplicationContext(),"f"+customerDetails.getCust_id(),Toast.LENGTH_SHORT).show();
+//                        }
+//                        else{
+//                            Toast.makeText(getApplicationContext(),"Errror",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<CustomerDetails> call, Throwable t) {
+//
+//                    }
+//                });
+//
+//            }
+//        });
+//
+
+
 
         findViewById(R.id.checkForTheCustomer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HashMap<String,String> map1=new HashMap<>();
+                HashMap<String,String> map10=new HashMap<>();
 
-                map1.put("username", ((EditText)findViewById(R.id.custUserNameIssuid)).getText().toString());
+                map10.put("username", ((EditText)findViewById(R.id.custUserNameIssuid)).getText().toString());
 
-                Call<customerDetails> call=retrofitInterface.customerConfirmationResult(map1);
-                call.enqueue(new Callback<customerDetails>() {
+                Call<customerDetails> call10=retrofitInterface.customerConfirmationResult(map10);
+                call10.enqueue(new Callback<customerDetails>() {
                     @Override
                     public void onResponse(Call<customerDetails> call, Response<customerDetails> response) {
-                        if(response.code()==602){
+                        if(response.code()==200){
 
 //                            ****************************************************************
                             customerDetails customerDetails=response.body();
@@ -205,9 +234,6 @@ public class Main2Activity extends AppCompatActivity {
                  cohe=findViewById(R.id.cohEntry);
                  coh=cohe.getText().toString();
 
-
-
-
                  HashMap<String,String> map4=new HashMap<>();
                  map4.put("routeFrom",routeNameFrom);
                  map4.put("routeTo",routeNameTo);
@@ -216,10 +242,10 @@ public class Main2Activity extends AppCompatActivity {
                  call7.enqueue(new Callback<billingDetails>() {
                      @Override
                      public void onResponse(Call<billingDetails> call, Response<billingDetails> response) {
-                         if (response.code()==300){
-                             Toast.makeText(getApplicationContext(),"error in db",Toast.LENGTH_SHORT).show();
+                         if (response.code()==202){
+//                             Toast.makeText(getApplicationContext(),"error in db",Toast.LENGTH_SHORT).show();
                          }
-                         else if(response.code()==302){
+                         else if(response.code()==200){
                              billingDetails bd=response.body();
 
                              Toast.makeText(getApplicationContext(),"proper "+bd.getRoute_cost(),Toast.LENGTH_SHORT).show();
@@ -278,21 +304,21 @@ public class Main2Activity extends AppCompatActivity {
                         Date c = Calendar.getInstance().getTime();
                         SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
                         String formattedDate = df.format(c);
+                        Toast.makeText(getApplicationContext(),""+formattedDate,Toast.LENGTH_SHORT).show();
 
-                        HashMap<String,String> map7=new HashMap<>();
-                        map7.put("busid",setter.getBus_number());
-                        map7.put("custid",setter.getCust_id());
-                        map7.put("routeid",setter.getRoute_id());
-                        map7.put("coh",coh);
-                        map7.put("cph",setter.getRoute_cost());
-                        //map7.put("total",(Integer.parseInt(setter.getRoute_cost())*Integer.parseInt(coh)));
-                        map7.put("transDate",formattedDate);
+                        HashMap<String,String> map12=new HashMap<>();
+                        map12.put("busid",setter.getBus_number());
+                        map12.put("custid",setter.getCust_id());
+                        map12.put("routeid",setter.getRoute_id());
+                        map12.put("coh",coh);
+                        map12.put("cph",setter.getRoute_cost());
+                        map12.put("transDate",formattedDate);
 
-                        Call<Void> call=retrofitInterface.insertToTransaction(map7);
+                        Call<Void> call=retrofitInterface.insertToTransaction(map12);
                         call.enqueue(new Callback<Void>() {
                             @Override
                             public void onResponse(Call<Void> call, Response<Void> response) {
-                                if(response.code()==406){
+                                if(response.code()==200){
                                     Toast.makeText(getApplicationContext(),"Ticket is issued",Toast.LENGTH_SHORT).show();
                                 }
                                 else{

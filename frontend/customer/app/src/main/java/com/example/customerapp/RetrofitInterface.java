@@ -20,7 +20,9 @@ public interface RetrofitInterface {
     Call<Void> executeMoneyUpdate(@Body HashMap<String,String> map);
 
     @POST("paymentDetails")
-    Call<List<TransactionDetails>> getPaymentDetails();
+    Call<List<TransactionDetails>> getPaymentDetails(@Body HashMap<String,String> map
+
+    );
 
 
 

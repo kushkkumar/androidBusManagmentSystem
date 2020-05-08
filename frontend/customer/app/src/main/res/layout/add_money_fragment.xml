@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/customer_entry"
     android:layout_height="match_parent">
 
     <TextView
@@ -11,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Add Money"
+        android:background="@drawable/dashboard"
+        android:textColor="@color/font"
+        android:text="ADD MONEY"
         android:textSize="60dp"
         app:layout_constraintBottom_toTopOf="@+id/enterMoneyId"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:ems="10"
+        android:background="@drawable/input_register"
+        android:textColor="@color/font"
+        android:textColorHint="@color/font"
         android:textSize="40dp"
         android:hint="Enter your money"
         android:gravity="center"
@@ -39,6 +45,8 @@
         android:layout_height="100dp"
         android:text="submit"
         android:textSize="30dp"
+        android:background="@drawable/button"
+        android:textColor="@color/font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

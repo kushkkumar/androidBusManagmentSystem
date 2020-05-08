@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.HashMap;
 import java.util.List;
 
 import retrofit2.Call;
@@ -46,8 +47,12 @@ public class paymentDetailFragmentActivity extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
+        HashMap<String,String> map=new HashMap<>();
+        map.put("username",setterRegisterPreview.getCust_user_name());
 
-        Call<List<TransactionDetails>> listCall=retrofitInterface.getPaymentDetails();
+
+
+        Call<List<TransactionDetails>> listCall=retrofitInterface.getPaymentDetails(map);
         listCall.enqueue(new Callback<List<TransactionDetails>>() {
             @Override
             public void onResponse(Call<List<TransactionDetails>> call, Response<List<TransactionDetails>> response) {

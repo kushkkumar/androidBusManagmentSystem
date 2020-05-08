@@ -2,8 +2,19 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/background"
     >
+    <TextView
+        android:background="@drawable/grp1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="TRANSACTION"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="@color/font"
+        android:layout_margin="20dp"></TextView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
